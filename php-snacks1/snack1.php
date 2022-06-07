@@ -1,3 +1,35 @@
+<?php
+
+$gamesArr = [
+    [
+        "home" => "Milano",
+        "guest" => "Cantu",
+        "homepoints" => 78,
+        "guestpoints" => 90,
+    ],
+    [
+        "home" => "Sassari",
+        "guest" => "Roma",
+        "homepoints" => 58,
+        "guestpoints" => 46,
+    ],
+    [
+        "home" => "Torino",
+        "guest" => "Venezia",
+        "homepoints" => 65,
+        "guestpoints" => 34,
+    ],
+    [
+        "home" => "Padova",
+        "guest" => "Treno",
+        "homepoints" => 64,
+        "guestpoints" => 93,
+    ]
+];
+
+var_dump($gamesArr);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
