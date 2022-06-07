@@ -1,16 +1,22 @@
 <?php
 
-$randomNumsArr = [];
+function randomNumbers($min, $max, $numLimit){
+    $randomNumsArr = [];
+
+    while(count($randomNumsArr) < $numLimit){
+        $randomNumber = rand($min, $max);
+        if(!in_array($randomNumber, $randomNumsArr)){
+            $randomNumsArr[] = $randomNumber;
+        }
+    }
+    return $randomNumsArr;
+};
 
 $numLimit = 15;
 
+$randomizedArr = randomNumbers(1, 100, $numLimit);
 
-for($i = 0; $i <= $numLimit; $i++){
-    $randomNum = rand(1, 100);
-    $randomNumsArr[] = $randomNum;
-};
-
-var_dump($randomNumsArr);
+var_dump($randomizedArr);
 ?>
 
 <!DOCTYPE html>
