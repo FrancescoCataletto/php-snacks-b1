@@ -40,5 +40,13 @@ var_dump($gamesArr);
 </head>
 <body>
     <h1>SNACK 1</h1>
+
+    <p>
+        <?php
+        foreach($gamesArr as $match){
+            echo $match["home"] . " - " . $match["guest"] . " | " . $match["homepoints"] . " - " . $match["guestpoints"] . "<br>";
+        }
+        ?>
+    </p>
 </body>
 </html>
