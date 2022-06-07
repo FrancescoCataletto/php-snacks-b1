@@ -4,47 +4,26 @@ $arrStudenti = [
     [
         "nome" => "Mario",
         "cognome" => "Rossi",
-        "voti" => [
-            "matematica" => 6,
-            "italiano" => 5,
-            "fisica" => 8,
-            "storia" => 2
-        ]
+        "voti" => [4,6,7,8,4]
     ],
     [
         "nome" => "Giulio",
         "cognome" => "Verdi",
-        "voti" => [
-            "matematica" => 5,
-            "italiano" => 7,
-            "fisica" => 3,
-            "storia" => 9
-        ]
+        "voti" => [3,8,6,9,6]
     ],
     [
         "nome" => "Marco",
         "cognome" => "Polo",
-        "voti" => [
-            "matematica" => 4,
-            "italiano" => 6,
-            "fisica" => 7,
-            "storia" => 6
-        ]
+        "voti" => [5,6,7,6,7]
     ],
     [
         "nome" => "Paolo",
         "cognome" => "Brosio",
-        "voti" => [
-            "matematica" => 7,
-            "italiano" => 6,
-            "fisica" => 9,
-            "storia" => 6
-        ]
+        "voti" => [5,9,7,8,7]
     ],
     
 ];
 
-var_dump($arrStudenti);
 
 ?>
 
@@ -59,5 +38,13 @@ var_dump($arrStudenti);
 </head>
 <body>
     <h1>SNACK 7</h1>
+
+    <p>
+        <?php
+        foreach($arrStudenti as $student){
+            echo $student["nome"] . " " . $student["cognome"] . " - " . "media voti: " . $student["voti"][1] . "<br>";
+        }
+        ?>
+    </p>
 </body>
 </html>
