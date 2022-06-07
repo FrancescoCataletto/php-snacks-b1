@@ -24,6 +24,12 @@ $arrStudenti = [
     
 ];
 
+$sample = [];
+
+$sample[] = $arrStudenti[1]["voti"];
+var_dump($sample);
+var_dump(array_sum($arrStudenti[0]["voti"]) / 5);
+
 
 ?>
 
@@ -41,8 +47,11 @@ $arrStudenti = [
 
     <p>
         <?php
-        foreach($arrStudenti as $student){
-            echo $student["nome"] . " " . $student["cognome"] . " - " . "media voti: " . $student["voti"][1] . "<br>";
+        for($i = 0; $i < count($arrStudenti); $i++){
+            echo $arrStudenti[$i]["nome"] . " " . $arrStudenti[$i]["cognome"] . "<br>";
+            for($j = 0; $j < count($arrStudenti[$i]["voti"]); $j++){
+                echo $arrStudenti[$i]["voti"][$j] . "<br>";
+            }  
         }
         ?>
     </p>
