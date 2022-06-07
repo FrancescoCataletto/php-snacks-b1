@@ -29,5 +29,11 @@ var_dump($randomizedArr);
 </head>
 <body>
     <h1>SNACK 4</h1>
+
+    <p><?php
+    foreach($randomizedArr as $number){
+        echo "<p>$number</p>";
+    }
+    ?></p>
 </body>
 </html>
